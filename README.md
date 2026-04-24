@@ -1,22 +1,9 @@
-# Car Factory — Fawry Internship Challenge
+# Car Factory
  
 A Java implementation of a Car Factory system using the **Strategy** and **Factory** design patterns, built as part of the Fawry Software Engineering Internship challenge.
  
 ---
- 
-## 📋 Table of Contents
- 
-- [Challenge Overview](#-challenge-overview)
-- [Project Structure](#-project-structure)
-- [Design Patterns Used](#-design-patterns-used)
-- [Engine Types](#-engine-types)
-- [Car Operations](#-car-operations)
-- [Class Diagram](#-class-diagram)
-- [How to Run](#-how-to-run)
-- [Sample Output](#-sample-output)
-- [Technologies](#-technologies)
----
- 
+
 ## 📌 Challenge Overview
  
 Design a **Car Factory** with swappable engine types:
@@ -52,17 +39,6 @@ CarFactory/
  
 ---
  
-## 🎨 Design Patterns Used
- 
-| Pattern | Class | Purpose |
-|---------|-------|---------|
-| **Strategy** | `Engine` interface | Allows swapping engines without modifying `Car` |
-| **Factory** | `CarFactory` | Centralizes car creation and engine replacement |
-| **Custom Exception** | `EngineNotStoppedException` | Enforces the rule: speed must be 0 before stopping |
- 
----
- 
- 
 ## 🚘 Car Operations
  
 | Operation | Description |
@@ -73,42 +49,6 @@ CarFactory/
 | `brake()` | Decreases speed by **20 km/h** (min: 0 km/h) |
  
 > Every 1 km/h change in car speed calls `engine.increase()` or `engine.decrease()` to keep the engine in sync.
- 
----
- 
-## 🗂️ Class Diagram
- 
-```
-           «interface»
-            Engine
-         ┌───────────┐
-         │ increase()│
-         │ decrease()│
-         │ getSpeed()│
-         │ getType() │
-         └─────┬─────┘
-               │ implements
-    ┌──────────┼──────────────┐
-    │          │              │
-GasolineEngine  ElectronicEngine  MixedHybridEngine
-                                  (has both internally)
- 
-          Car
-       ┌────────┐
-       │ engine │◄── Strategy (any Engine)
-       │ speed  │
-       │ start()│
-       │ stop() │
-       │ accel()│
-       │ brake()│
-       └────────┘
- 
-       CarFactory
-       ┌──────────────┐
-       │ createCar()  │──► new Car(engine)
-       │ replaceEngine│──► car.replaceEngine(engine)
-       └──────────────┘
-```
  
 ---
  
