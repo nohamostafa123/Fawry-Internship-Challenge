@@ -62,27 +62,6 @@ CarFactory/
  
 ---
  
-## ⚙️ Engine Types
- 
-### 🔴 GasolineEngine
-- Standard combustion engine
-- Works at all speeds
-- `increase()` / `decrease()` adjust internal speed by 1 km/h
-### 🔵 ElectronicEngine
-- Electric motor
-- Works at all speeds
-- `increase()` / `decrease()` adjust internal speed by 1 km/h
-### 🟢 MixedHybridEngine
-- Contains **both** a `GasolineEngine` and an `ElectronicEngine`
-- **Electric** engine is active when car speed is **below 50 km/h**
-- **Gas** engine is active when car speed is **50 km/h or above**
-- ✅ Cost-optimized — only one sub-engine runs at any time
-```
-Speed < 50 km/h  →  Electric Engine ⚡
-Speed >= 50 km/h →  Gas Engine 🔥
-```
- 
----
  
 ## 🚘 Car Operations
  
