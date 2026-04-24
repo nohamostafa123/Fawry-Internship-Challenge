@@ -77,33 +77,6 @@ java -cp out Main
 3. Press **F5** or click **Run** above the `main` method
 ---
  
-## 📟 Sample Output
- 
-```
-══════════════════════════════════════
-  Gasoline Car Test
-══════════════════════════════════════
-Factory → Created car with Gasoline Engine
-Car STARTED  |  Engine: Gasoline Engine
-Accelerating from 0 → 20 km/h ...
-  [GasolineEngine] speed → 1 km/h
-  ...
-  [GasolineEngine] speed → 20 km/h
-Braking from 20 → 0 km/h ...
-  [GasolineEngine] speed → 0 km/h
-Car STOPPED.
- 
-══════════════════════════════════════
-  Hybrid Car Test
-══════════════════════════════════════
-Accelerating from 40 → 60 km/h ...
-  [ElectricEngine] speed → 41 km/h   ← Electric zone
-  ...
-  [GasolineEngine] speed → 51 km/h   ← Gas zone (>=50)
-```
- 
----
- 
 ## 🛠️ Technologies
  
 - **Language:** Java 17
