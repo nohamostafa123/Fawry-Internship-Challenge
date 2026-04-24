@@ -1,4 +1,4 @@
-# 🚗 Car Factory — Fawry Internship Challenge
+# Car Factory — Fawry Internship Challenge
  
 A Java implementation of a Car Factory system using the **Strategy** and **Factory** design patterns, built as part of the Fawry Software Engineering Internship challenge.
  
